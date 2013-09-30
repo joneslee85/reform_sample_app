@@ -1,0 +1,18 @@
+%table.table
+  %thead
+    %th TYIMS ID
+    %th Name
+    %th Gender
+    %th DOB
+    %th.actions
+  %tbody
+    - @people.each do |app|
+      %tr
+        %td= app.tyims_id
+        %td= app.full_name
+        %td= app.gender
+        %td= app.date_of_birth
+        %td
+          .btn-group
+            = link_to(icon('eye-open'), app, class: 'btn btn-mini', rel: 'tooltip', title: 'view')
+            = link_to(icon('edit'), edit_apprentice_path(app), class: 'btn btn-mini', rel: 'tooltip', title: 'edit')

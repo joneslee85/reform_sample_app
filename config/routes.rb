@@ -1,6 +1,7 @@
 MyStore::Application.routes.draw do
 
   resources :apprentices
+  resources :people
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
